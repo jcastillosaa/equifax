@@ -1,0 +1,29 @@
+<div class="card text-center">
+    <div class="card-header">
+        Usuarios
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usuario of usuarios; let i=index">
+                    <th scope="row">{{ i }}</th>
+                    <td>{{ usuario.email }}</td>
+                    <td>{{ usuario.name }}</td>
+                    <td>{{ usuario.edad }}</td>
+                    <td>
+                        <button class="btn btn-danger" (click)="eliminarUsuario(usuario._id)">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

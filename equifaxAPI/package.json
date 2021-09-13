@@ -1,0 +1,36 @@
+{
+    "name": "equifaxapi",
+    "version": "1.0.0",
+    "description": "prueba tec. para equifax",
+    "main": "index.js",
+    "scripts": {
+        "start": "cross-env NODE_ENV=prod node src/index.js",
+        "dev": "cross-env NODE_ENV=dev nodemon src/index.js",
+        "test": "jest --coverage --verbose",
+        "test2": "nyc --reporter=lcov mocha --recursive --exit",
+        "test3": "cross-env TEST_MODE=true jest --coverage --config ./test/jest-e2e.json --detectOpenHandles",
+        "test4": "set TEST_MODE=true && jest --coverage --config ./test/jest-e2e.json --detectOpenHandles"
+    },
+    "author": "",
+    "license": "ISC",
+    "jest": {
+        "testEnvironment": "node",
+        "roots": [
+            "./src/controllers/"
+        ],
+        "coveragePathIgnorePatterns": []
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "cross-env": "^7.0.3",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "jest": "^27.1.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.0.5",
+        "morgan": "^1.10.0",
+        "passport": "^0.4.1",
+        "passport-jwt": "^4.0.0"
+    }
+}

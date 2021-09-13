@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-header text-center">
+        Nuevo Usuario
+    </div>
+    <div class="card-body">
+        <form class="mx-5 my-5" [formGroup]="formUsuario">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" formControlName="name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Edad</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" formControlName="edad">
+            </div>
+            <div class="text-center mt-5">
+                <button type="submit" class="btn btn-primary" (click)="crearUsuario()" [disabled]="formUsuario.invalid">Registrar</button>
+            </div>
+        </form>
+    </div>
+</div>
